@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["vasanthakumara117@gmail.com"]
 
   spec.summary       = "Toast notifications for Rails."
-  spec.description   = "A lightweight Rails gem providing a framework-agnostic toast notification system with seamless integration."
+  spec.description   = "A lightweight Rails gem providing a toast notification system. Compatible with Rails 4, 5, 6, 7+ and also integrates seamlessly with Turbo Stream requests."
   spec.homepage      = "https://github.com/vasanthakumar-a/toastify"
   spec.license       = "MIT"
   spec.required_ruby_version = ">= 1.9.3"
