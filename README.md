@@ -10,11 +10,7 @@ It can also be used directly in JavaScript (e.g., `Toastify.success("Saved!")`).
 
 ### Example Images
 
-<img width="346" height="85" alt="Light Theme Example" src="https://github.com/user-attachments/assets/b7a3123a-89a3-4f49-97ff-aa25f4b870d0" />
-
-<img width="338" height="87" alt="Dark Theme Example" src="https://github.com/user-attachments/assets/65671ac6-91d7-471f-9c03-6458023f3ae2" />
-
-<img width="339" height="83" alt="Colored Theme Example" src="https://github.com/user-attachments/assets/1c99ffdb-dc3c-4fef-aa16-b7eff08e0cde" />
+<img width="340" height="222" alt="Theme Examples" src="https://github.com/user-attachments/assets/ed0350ef-295d-4ba6-ab51-94a9e071eac4" />
 
 ## Installation
 
