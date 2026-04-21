@@ -5,6 +5,9 @@
 Compatible with Rails 4+ and also integrates seamlessly with Turbo Stream requests.
 It can also be used directly in JavaScript (e.g., `Toastify.success("Saved!")`).
 
+[![Gem Version](https://badge.fury.io/rb/toastify.svg)](https://rubygems.org/gems/toastify)
+[![GitHub Release](https://img.shields.io/github/v/release/vasanthakumar-a/toastify)](https://github.com/vasanthakumar-a/toastify/releases)
+
 ### Example Images
 
 <img width="346" height="85" alt="Light Theme Example" src="https://github.com/user-attachments/assets/b7a3123a-89a3-4f49-97ff-aa25f4b870d0" />
