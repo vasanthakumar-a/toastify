@@ -11,7 +11,9 @@ module Toastify
     def append_toastify_to_response
       return unless request.format.turbo_stream? || turbo_frame_request?
 
-      toast_flashes = flash.reject { |type, _| type.to_s.start_with?("toast_") }
+      toast_flashes = flash.reject do |type, _|
+        type.to_s.start_with?("toast_") || !Toastify::FLASH_KEYS.include?(type.to_s)
+      end
       return unless toast_flashes.any?
 
       script_content = helpers.toastify_script_tag

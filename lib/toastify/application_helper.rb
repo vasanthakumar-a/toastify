@@ -55,11 +55,13 @@ module Toastify
         "error" => "error",
         "info" => "info",
         "warning" => "warning",
+        "default" => "default",
       }
 
       script_lines = []
       flash.each do |flash_type, message|
         next if flash_type.to_s.start_with?("toast_")
+        next unless Toastify::FLASH_KEYS.include?(flash_type.to_s)
 
         type = type_map.fetch(flash_type.to_s, "default")
         position = flash[:toast_position] || default_position
@@ -75,8 +77,11 @@ module Toastify
         script_lines << "window.Toastify && window.Toastify.show('#{safe_message}', { type: '#{j(type.to_s)}', position: '#{j(position.to_s)}', autoClose: #{auto_close.to_i}, theme: '#{j(theme.to_s)}', transition: '#{j(transition.to_s)}', closeButton: #{!!close_button}, pauseOnHover: #{!!pause_on_hover}, draggable: #{!!draggable} });"
       end
 
-      # Discard so it doesn't show up again
-      flash.keys.reject { |type| type.to_s.start_with?("toast_") }.each do |type|
+      # Discard consumed toast flashes only; leave other keys (e.g. :alert) intact
+      flash.keys.each do |type|
+        next if type.to_s.start_with?("toast_")
+        next unless Toastify::FLASH_KEYS.include?(type.to_s)
+
         flash.discard(type)
       end
 
